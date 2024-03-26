@@ -10,7 +10,6 @@ public class Busca extends Thread{
 	private String caminhoarquivo;
 	private String nome;
 	private static Semaphore semaphore = new Semaphore(2);
-	public int cont;
 	
 	public Busca(String caminhoarquivo, String nome) {
 		this.caminhoarquivo = caminhoarquivo;
@@ -20,7 +19,6 @@ public class Busca extends Thread{
 	public void buscaArquivo() {
 		
 		 try (BufferedReader br = new BufferedReader(new FileReader(caminhoarquivo))) {
-			 	System.out.println(cont);
 	            String linha;
 	            while ((linha = br.readLine()) != null) {
 	            	linha = linha.toLowerCase();
@@ -37,8 +35,6 @@ public class Busca extends Thread{
 		try {
 			semaphore.acquire();
 			buscaArquivo();
-			cont ++;
-			System.out.println(cont);
 		}
 		catch(InterruptedException e){
 			System.out.println(e.getMessage());
