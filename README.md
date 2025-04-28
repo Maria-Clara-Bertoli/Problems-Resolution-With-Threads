@@ -1,6 +1,6 @@
 # 🧵⚡ Resolução de Problemas Através de Processos Concorrentes, Utilizando Threads
 
-Este repositório contém a implementação da **resolução de diversos problemas** através de processos **concorrentes** utilizando **Threads**.
+Este repositório contém a implementação da **resolução de diversos problemas** através de processos **concorrentes**, utilizando **Threads**.
 
 ☕ As implementações foram realizadas na linguagem **Java**.
 
